@@ -1,0 +1,660 @@
+
+@font-face {
+  font-family: 'Open SANS';
+  src: url('open-sans/OpenSans-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Open SANS-BOLD';
+	src: url('open-sans/OpenSans-Bold.ttf') format('truetype');
+  }
+body{
+	height:auto;
+	width: 100%;
+	margin:0px;
+	padding:0px;
+	
+	/*background-color:rgb(69,69,69);*/
+    background-color:white; 	/*rgb(240,240,240); */
+	
+}
+
+/*rgb(33,29,26);*/
+
+.niveau2{
+	/*padding-top:20px;*/
+	width: 100%;
+	display:flex;
+	justify-content:space-between;
+	background-color:white;
+	/*background-image:/*url("img/Protection-chantier.jpg");
+		background-repeat:no-repeat;
+		background-size:100% auto;
+		height:auto;*/
+		width:100%;
+
+}
+.img_et_nom{
+	display:flex;
+	justify-content: flex-start;
+}
+.nom_Agrofaz{
+	color:black;
+	font-weight: bold;
+	font-family: 'Helvetica','Roboto','Dayrom', serif;
+	font-size:100%;
+	font-size:25px;
+	display:flex;
+	align-items: center;
+}
+#Logo_Agrofaz{	
+	height:80px;
+	width:80px;
+	margin:5px 15px;
+}
+
+#niveau3{
+	
+	display: flex;
+	align-items: center;
+}
+/*Menu Masquer*/
+#Menu_Burger{
+	display:none;
+}
+#main_page{
+	display: flex;
+	flex-direction:row;
+	height:30px;
+
+	
+}
+#main_page ul{
+
+	
+	display:flex;
+	flex-direction:row;
+	padding:0;
+	margin:0;
+	justify-content:flex-start;
+	
+	
+}
+#main_page li{ 
+	list-style-type:none;
+	padding:4px 10px;
+	padding-right:10px;
+	display: flex;
+	/*border-right:1px solid black; rgba(255,255,255,0.4);*/
+	align-items: center;
+	height: 20px;
+	/*border: 1px solid black;*/
+	
+	
+
+}
+/* "Helvetica","Arial", "Verdana", "Open Sans", "Roboto" et "Lato".*/
+#main_page a {
+	color:black;
+	font-weight: bold;
+	text-decoration:none;
+	font-family: 'Roboto','Open SANS','Helvetica';
+}
+#main_page a:hover{
+	color: blue;
+	text-decoration: underline;
+	text-decoration-color: rgb(15,75,160);
+		
+	}
+
+	/* Banniere */
+	.img_banniere{
+			
+			/*position: relative;
+			overflow: hidden;
+			padding-bottom: 56.25%;*/
+			width: 100%;
+			height:70vh;
+			margin: 0px auto;
+			display: flex;
+			flex-direction:row;
+			justify-content: space-between;
+			align-items: center;
+			transition:opacity 0.5s ease;
+			object-fit: cover;
+			background: no-repeat center center;
+			background-size: cover;
+			
+			
+			
+	}
+	#slideshow{
+		background-image:url("img/Protection-chantier.jpg");
+		transition:opacity 0.5s ease;
+	}
+	#slideshow.clear{
+		opacity:0;
+	}
+	.defil_icone{
+		margin:0 5px;
+		transform: translateY(-50%);
+		font-size: 30px;
+		cursor: pointer;
+		width:25px;
+		height:45px;
+	
+
+	}
+	#defil_phrase{
+		font-size: 9vw;
+		font-weight: bold;
+		color:blue;
+	}
+	/*.img_banniere img{
+		/*background-image:url("img/Protection-chantier.jpg");
+		background-repeat:no-repeat;
+		background-size:100% auto;
+		height:70vh;
+		width:100%;
+		position: absolute;
+			top: 0;
+			left: 0;
+		
+		width:100%;
+		height:40vh;
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+		/*
+		
+	} */
+	
+		
+		
+	
+	
+
+/*Media query for sceen who have screen width under:500px*/
+@media only screen and (max-width: 500px)
+{	
+	/*Taille des lettre pour tout les element de la 
+	rubrique section*/
+	section,footer{
+	font-size: 3vw;
+	}
+	/*FIN de définition de la taille des lettre*/
+
+	/*	Logo et description de l'entreprise*/
+	/*#Logo_Agrofaz{
+	height:40px;
+	width:50px;
+	margin:5px 5px;
+    }
+	
+	.nom_Agrofaz{
+		font-size: 60%
+		color: white;
+		width:85px;
+		margin-top:10px;
+	}
+	/*Gestion des immage*/
+	
+	.image_de_pied_de_page{
+		max-height:6vw;
+		max-width:6vw;
+	}
+	.BoutontX{
+		font-size:25px;
+		bottom: 20px;
+		display:none;
+		text-decoration:none;
+		color:#111;
+		transition:display 5s ease;
+	}
+	.BoutontX.visible{
+		display:block;
+		opacity: 0.5;
+		top:20;
+		margin-right:14px;
+		
+		
+	}
+	.burger-icon.hide{
+		display: none;
+	}
+	/*Fin de gestion des image*/	
+
+}
+
+/* Fin du media query 500px Navigation */
+
+@media only screen and (max-width: 768px){
+	
+	/*Barre de navigation*/
+	#Menu_Burger{
+	display:block;/*Just for remove display:none effect*/
+	}
+	#main_page{
+		display:none;
+	}
+	.sidenav{
+	height:100vh;
+	width:60vw;
+	position:fixed;
+	z-index:1;
+	top:0;
+	left:-60vw;
+	background-color:#e8e8e8;
+	padding-top:60px;
+	transition:left 0.5s ease;
+	opacity: 0.95;
+	box-shadow: 14px,14px,4px,5px,black;
+	}
+	/*sidenav menu links*/
+	.sidenav a {
+		padding: 15px 8px 15px 32px;
+		text-decoration:none;
+		display:block;
+		transition:0.3s;
+		border-bottom:1px solid grey
+
+	}
+	.sidenav a:hover{
+		color:#111;
+		background-color: green;
+	}
+	.sidenav a:active{
+		background-color: violet;
+
+	}
+	.sidenav ul {
+		list-style-type:none;
+		padding:0;
+		margin:0;
+
+
+	}
+
+	/*Active Class*/
+	.sidenav.active{
+		left:0;
+	}
+	/*Close btn*/
+	.sidenav .close{
+		position: absolute;
+		top:0;
+		right:25px;
+		font-size:36px;
+	}
+	/*Icone Burger*/
+	.burger-icon span{
+		display:block;
+		width:25px;
+		height: 3px;
+		background-color:green;
+		margin:3px 0;
+		margin-right: 4px;
+
+	}
+	.BoutontX{
+		font-size:25px;
+		bottom: 20px;
+		display:none;
+		text-decoration:none;
+		color:#111;
+		transition:display 5s ease;
+	}
+	.BoutontX.visible{
+		display:block;
+		opacity: 0.5;
+		top:20;
+		margin-right:14px;
+		
+		
+	}
+	.burger-icon.hide{
+		display: none;}/*Fin de la barre de navigation*/
+	  .img_banniere{
+		/*background-image:url("img/Protection-chantier.jpg") ;
+	    background-repeat:no-repeat;
+	    background-size:100% auto;*/
+		size:100%;
+	    height:65vw;
+	    width:100%;
+	  
+	}
+
+		
+		
+	
+}
+/*Fin du media query 768 de la navigation*/
+
+
+
+/*Section*/
+#Apropos_block_index h1{
+	font-size: 20px;
+    font-family: 'Roboto',sans-serif;
+	margin-left:3px;
+    
+}
+#Apropos_block_index a {
+	color:blue;
+	font-weight: bold;
+	font-family: 'Roboto',sans-serif;
+	
+	
+}
+.centrage{
+	display: flex;
+	justify-content: center;
+}
+#logo_Agrofaz_Apropos_index{
+	width:100px;
+	height:100px;
+}
+.a_propos_description{
+	width: 90%;
+	font-size: 16px;
+    font-family: 'Roboto',sans-serif;
+	margin: 0 15px;
+	
+	
+    
+}
+
+
+#Lien_du_blog_a_l_acceuil{
+	 display:flex;
+	 justify-content: center;
+	 border-radius: 4px;
+	  color:black;
+	  background-color:rgb(220,220,220) ;
+	 padding:15 50;
+}	
+.redirect_link{
+	color:black;
+	text-decoration: none;
+}
+.img_box_link_to_blog{
+	width:98%;
+	height:180px;
+	/* margin:auto; */
+	/* Il faut chercher a savoir pourquoi quand la mesure de la hauteur est en pourcentage la hauteur du bloc augumente 
+	arnormalement */
+	
+}
+#first_Box{
+	width: 300px;
+	border:1px solid  rgb(152, 152, 144);/*rgb(230,230,230);*/
+	border-radius:4px;
+	
+
+
+}
+.box_link_to_blog:active,.box_link_to_blog:hover{
+
+	box-shadow: 10px 10px 6px grey;
+	
+}
+.box_link_to_blog p{
+	font-weight: lighter;
+
+}
+.box_link_to_blog{
+	padding-top: 5px;
+	padding-left:5px;
+}
+	
+.un_chantier{
+	width:300px;
+	border:1px solid rgb(152, 152, 144);
+	border-radius: 4px;
+	margin-left: 15px; /*donner 15px d'ecart a la gauche donc le premier element 
+	na pas besoin de ça*/
+
+}
+.espace_commentaire{
+	color:black;
+	margin: 0 50;
+	/* background-image: url("img/immeuble.jpg"); */
+	
+}
+.client_comments{
+	display:flex;
+	margin:0;
+	justify-content: space-between;
+}
+.client_comments_box{
+	width:48%;
+	border-radius:4px;
+	
+	padding:6;
+
+}
+.photo_du_client{
+	width:7vw;
+	height:7vw;
+	margin-right:4px;
+	border-radius:100%;
+}
+.presentation_du_client{
+	display:flex;
+	font-weight: bold;
+}
+.decision_et_recommendation{
+	text-decoration: blink;
+	font-family: Times;
+	font-weight: bold;
+	color:rgb(77,176,70);
+
+}
+ /* Media query 500px */
+
+@media only screen and (max-width:500px){
+	/*SECTION*/
+	.banner_down{
+		font-size:15px;
+		
+	}
+	.banner_down h1{
+		font-size:20px;
+	}
+	#Lien_du_blog_a_l_acceuil{
+		 display:flex;
+		 flex-direction:column;
+		 justify-content: center;
+		 border-radius: 4px;
+		 color:black;
+		  /* border: 1px solid black;   */
+		 background-color:rgb(220,220,220) ;
+		 padding:15px 20px;
+   }
+   #Lien_du_blog_a_l_acceuil h1,p{
+	margin:7px 0;
+   }
+   #first_Box{
+	width: 100%;
+	border:1px solid rgb(152, 152, 144);/*rgb(230,230,230);*/
+	border-radius:4px;
+	
+
+
+}
+   .un_chantier{
+	width:100%;
+	border:1px solid rgb(152, 152, 144);
+	border-radius: 4px;
+	margin-left:0;
+	margin-top: 10px;
+
+}
+
+ .box_link_to_blog{
+	padding-top: 0;
+	padding-left:0;
+}
+.description{
+	padding-top:0;
+	padding-left:5px;
+}
+   .img_box_link_to_blog{
+	width:100%;
+	height:140px;
+	
+	/* border-radius:200px; */
+   }
+
+}/*Fin du media query*/
+
+
+
+@media only screen and (min-width:501px) and (max-width:800px){
+/*SECTION*/
+	#Lien_du_blog_a_l_acceuil{
+		 display:flex;
+		
+		 justify-content: center;
+		 border-radius: 4px;
+		 color:black;
+		 border: 1px solid black; 
+
+		 background-color:rgb(220,220,220) ;
+		 padding:15px 10px;
+   }
+    .surplus{
+		display: none;
+   }
+   .img_box_link_to_blog{
+	width:96%;
+	height:90px;
+	/* border-radius:200px; */
+   }
+}
+
+   /* Les commentaires */
+   .espace_commentaire{
+	color:black;
+	margin:0;
+	}
+	/* background-image: url("img/immeuble.jpg"); */
+/*fIN DU Media query*/
+ 
+   
+
+   /* Les commentaires */
+   .espace_commentaire{
+	color:black;
+	margin:0;
+	}
+	/* background-image: url("img/immeuble.jpg"); */
+
+
+
+	.client_comments{
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+		margin:0 4px;
+		
+
+		
+		padding: 0;
+		
+
+	}
+	.client_comments_box{
+		width:45%;
+		border: 1px solid grey;
+		border-radius: 4px;
+		margin-bottom: 	25px;
+		margin-left:6px;
+		/* margin-left:5px; */
+		/* margin-right:5px; */
+		/* padding:0 5;	 */
+	
+	}
+	
+
+   	
+
+ @media screen and (max-width:500px){ 
+
+   /* Les commentaires */
+	.client_comments{
+		display:flex;
+		flex-direction:column;
+		justify-content:space-between;
+		/*border:1px solid black;*/
+		margin: 0 15px;
+		padding: 0px ;
+		padding-bottom: 5px;
+
+		/* padding:0 55px; */
+
+		
+		
+
+	}
+	.client_comments_box{
+		
+		/*border:1px solid indigo;*/
+		border-radius: 4px;
+		margin:0;
+		padding:0 15px;
+		width:auto;
+		margin-top:10px;
+	
+	} 
+	span.commentaires_du_client{
+		font-size: 12px;
+		font-family:ROBOTO, Geneva, Tahoma, sans-serif;
+	}
+} 
+
+
+footer{
+	margin-top:30px;
+	background-color: rgb(220,220,220);
+	padding-top: 25;
+	padding-left:50px;
+	
+}
+.Suivez_nous{
+	display:flex;
+	flex-direction:column;
+
+}
+.image_de_pied_de_page{
+	height:30px;
+	width:30px;
+}
+
+.contact_link{
+	position:relative;
+	bottom:8px;
+}
+
+
+/*Page Conatacts*/
+#box_contacts{
+	border:1px solid yellow;
+	display: flex;
+	justify-content:space-between;
+	width:90%;
+	padding:0 5px;
+	padding-right: 15px;
+}
+.contact_link{
+	position:relative;
+	bottom:8px;
+}
+/* Media for part of footer */
+@media only screen and (max-width:500px){
+	footer{
+		padding:10 5;
+	}
+}
+
+
+
+/*.the_contact:hover{ background-color: rgb(69,69,69) }*/

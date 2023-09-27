@@ -1,0 +1,265 @@
+body{
+	height:auto;
+	margin:0px;
+	padding:0px;
+	/*background-color:rgb(69,69,69);*/
+	background-color:white;rgb(240,240,240);
+	
+}
+
+/*Entete niveau1*/
+/*.niveau1{
+	 
+	height:auto;
+	background-color: rgb(33,29,26);
+	display:flex;
+	justify-content: flex-end;
+	color:white;
+	//position: fixed;//
+	width:100%;
+	
+}*/
+.niveau2{
+	/*padding-top:20px;*/
+	width: 100%;
+	background-color: rgb(69,69,69);
+}
+.img_et_nom{
+	display:flex;
+	justify-content: flex-start;
+}
+.nom_Agrofaz{
+	color:white;
+	font-family: 'Dayrom', serif;
+	font-size:100%;
+	font-size:20px;
+	position:relative;
+	top:6px;
+}
+#Logo_Agrofaz{	
+	height:80px;
+	width:90px;
+	margin:5px 15px;
+}
+
+nav{
+	display: flex;
+	flex-direction:row;
+	height:35px;
+	margin-left:;
+	background-color:orange;
+}
+nav ul{
+
+	
+	display:flex;
+	flex-direction:row;
+	padding:0;
+	margin:0;
+	justify-content:flex-start;
+	
+	
+}
+nav li{ 
+	list-style-type:none;
+	padding:10px;
+	padding-right:14px;
+	display: flex;
+	border-right:1px solid rgba(255,255,255,0.4);
+	align-items: center;
+	
+
+}
+nav a {
+	color:white;
+}
+nav li:hover{
+		background-color: green;
+		
+	}
+
+/*Media query for sceen who have screen width under:500px*/
+@media only screen and (max-width: 500px)
+{	
+	/*Taille des lettre pour tout les element de la 
+	rubrique section*/
+	.niveau1,section,footer{
+	font-size: 3vw;
+	}
+	/*FIN de définition de la taille des lettre*/
+
+	/*	Logo et description de l'entreprise*/
+	#Logo_Agrofaz{
+	height:40px;
+	width:50px;
+	margin:5px 5px;
+    }
+	
+	.nom_Agrofaz{
+		font-size: 60%;
+		color: white;
+		width:85px;
+		margin-top:10px;
+	}
+	/*Fin de Logo et description de l'entreprise*/
+	/*Barre de navigation*/
+    nav{
+	display: flex;
+	flex-direction:row;
+	height:25px;
+
+	}
+    nav li{ 
+	list-style-type:none;
+	padding:1.5vw;
+	display: flex;
+	border-right:1px solid rgba(255,255,255,0.4);
+	align-items: center;
+	}
+	nav a{
+		font-size:3vw;9.6px;
+	}
+	nav li:hover{
+		background-color: green;
+		
+	}
+/*Fin de la barre de navigation*/
+	
+
+    
+/*Gestion des immage*/
+	#image_banniere{
+		max-height: 150px;
+		max-width:100%;
+		border:1px solid black;
+	}
+	.image_de_pied_de_page{
+	max-height:5vw;
+	max-width:5vw;
+}
+/*Fin de gestion des image*/
+	
+}
+/*Fin du media query*/
+
+/*Section*/
+section{
+		
+	}
+
+#image_banniere{
+	
+	width:100%;
+	height:400px;
+	/*border-radius:6px;*/
+}
+#sous_la_banniere{
+	/*margin:0 50*/;
+}
+#Lien_du_blog_a_l_acceuil{
+	display:flex;
+	border-radius: 4px;
+     color:black;
+     padding: 4px;
+     background-color:rgb(220,220,220) ;
+    padding:15 50;
+    
+}	
+
+#A_propos_de_Agrofaz{
+	width: 300px;
+	border:1px solid rgb(230,230,230);
+	border-radius:4px;
+	padding: 0 4;
+
+
+}
+.box_link_to_blog:active,.box_link_to_blog:hover{
+	box-shadow: 10px 10px 6px grey;
+}
+.box_link_to_blog p{font-weight: lighter;
+
+}
+.un_chantier{
+	width:300px;
+	border:1px solid rgb(230,230,230);
+	border-radius: 4px;
+	margin-left: 15px;
+
+}
+.espace_commentaire{
+	color:black;
+	padding: 0 50;
+	
+}
+.client_comments{
+	display:flex;
+
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.client_comments_box{
+	width:48%;
+	border:1px solid black;
+	padding:0 6;
+
+}
+.photo_du_client{
+	width:70px;
+	height:60px;
+	margin-right:4px;
+}
+.presentation_du_client{
+	display:flex;
+}
+.decision_et_recommendation{
+	text-decoration: blink;
+	font-family: 'Times';
+	font-weight: bold;
+	color:red;
+
+}
+
+
+
+
+
+footer{
+	margin: 15 0;
+	background-color: rgb(220,220,220);
+	padding-left:5px;
+	
+}
+.Suivez_nous{
+	display:flex;
+	flex-direction:column;
+
+}
+.image_de_pied_de_page{
+	height:30px;
+	width:30px;
+}
+
+.contact_link{
+	position:relative;
+	bottom:8px;
+}
+
+
+/*Page Conatacts*/
+#box_contacts{
+	border:1px solid yellow;
+	display: flex;
+	justify-content:space-between;
+	width:90%;
+	padding:0 5px;
+	padding-right: 15px;
+}
+.contact_link{
+	position:relative;
+	bottom:8px;
+}
+
+
+
+/*.the_contact:hover{ background-color: rgb(69,69,69) }*/

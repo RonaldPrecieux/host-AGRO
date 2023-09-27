@@ -1,0 +1,13 @@
+{
+	"folders": [],
+	"settings": {
+		"workbench.colorCustomizations": {
+			
+				"scope": "comment",
+				"settings": {
+					"foreground": "#2020ec"
+				}
+			
+		}
+	}
+}

@@ -1,0 +1,354 @@
+
+#main_page li a {
+	color:black;
+	font-weight: bold;
+	text-decoration:none;
+	font-family: 'Roboto','Open SANS','Helvetica';
+}.img_service_banner{
+	background-image:url("img/architect2.jpg") ;
+    background-repeat:no-repeat;
+    background-size:100% auto;
+    height:65vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+   
+    justify-content: center;
+}
+.img_service_banner p {
+    color:greenyellow;
+    position: absolute;
+    
+    font-weight:bold;
+    font-size: 70px;
+    font-family: 'Roboto',sans-serif;
+}
+.bannerdown{
+    margin:0 90px;
+}
+p.intervention{
+    display:flex;
+    flex-direction: column;
+    border:1px solid grey;
+    border-bottom: 0px;
+  
+    
+}
+span.intervention{
+    font-size:20px;
+    font-weight: bold;
+    font-family: 'Roboto',sans-serif;
+    padding-right: 50%;
+    height:40px;
+    border-bottom:1px solid black;
+    background-color: rgb(140,140,140);
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5px;
+    
+}
+span.intervention:hover{
+    background-color:green; /*rgb(237,29,35);*/
+    box-shadow:10px 10px 5px grey;
+
+}
+#Que_fesons_nous,.titre_de_section{
+    font-size: 30px;
+    font-family: 'Roboto',sans-serif;
+    
+    
+}
+.services{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:100%;
+    height: auto;
+   
+    
+}
+.service{
+    border:1px solid rgb(44,123,254);
+   
+    width:30%;
+ 
+    margin-bottom: 30px;
+    border-bottom: 24px inset rgb(44,123,254);
+    border-radius: 0px 0px 14px 7px;
+    background-color: white;
+    box-shadow: 14px 14px grey;
+}
+/* .service:hover{
+    color:white;
+    background-color: rgb(44,123,254);
+} */
+
+
+.service h1 {
+   font-size:20px;
+   font-weight: bold;
+     font-family: 'Roboto',sans-serif;
+     margin:0 auto;
+     padding: 0 15px ;
+}
+
+.service_descrption,.description_realisation{
+    font-size: 17px;
+    font-family: Lato,'Roboto',sans-serif;
+    
+    margin:0 auto;
+    width:85%;
+}
+
+.services{
+    display:flex;
+    flex-wrap:wrap;
+    height: auto;
+}
+.icone{
+    height:100px;
+    width:110px;
+    margin:0 auto;
+
+}
+.batiment{
+    background-image:url("img/Batiment.png") ;
+    background-repeat:no-repeat;
+    background-size:100% auto;
+   
+   
+}
+.route{
+    background-image:url("img/route.png") ;
+    background-repeat:no-repeat;
+    background-size:100% auto;
+    
+}
+.immobillier{
+    
+        background-image:url("img/gestionimmo.png") ;
+        background-repeat:no-repeat;
+        background-size:100% auto;
+       
+}
+.commerce_gene{
+    background-image:url("img/commercegene.png") ;
+    background-repeat:no-repeat;
+    background-size:100% auto;
+}
+.section_realisation_services{
+
+    margin: 0px;
+}
+
+.Les_projets{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+   
+    padding: 5px;
+
+}
+.voir_tout{
+    font-size: 20px;
+        font-family: 'Roboto',sans-serif;
+        text-decoration: none;
+  }
+a.voir_tout:hover{
+    text-decoration: underline black;
+  }
+ 
+    .see_all{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top:7px;
+
+    }
+.projet{
+   border: 1px solid black;
+    
+    width:30%;
+    /* display: none; */
+    margin-bottom: 30px;
+    transition:box-shadow 0.5s ease;
+    border-radius:0 0 10px 10px
+}
+/* .Les_projets:nth-child(-n+3){
+    display: block;
+} */
+.bloc_description{
+   
+     background-color:rgb(16,76,161); 
+     border-radius:0 0 10px 10px;
+    
+}
+.projet:hover{
+    box-shadow:14px 14px 5px grey;
+}
+/*//////////////////////////////////////////////////  768 /////////////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 768px)
+{
+    .service{
+        border:1px solid rgb(44,123,254);
+       
+        width:45%;
+        
+        margin-bottom: 30px;
+        border-bottom: 24px inset rgb(44,123,254);
+        border-radius: 0px 0px 14px 7px;
+        background-color: white;
+        box-shadow: 14px 14px grey;
+    }
+    .projet{
+        border:1px solid green;
+        width:45%;
+        margin-bottom: 30px;
+        transition:box-shadow 0.5s ease;
+    }
+    
+}
+/*//////////////////////////////////////////////////  500  /////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 500px)
+{
+    .img_service_banner{
+        background-image:url("img/architect2.jpg") ;
+        background-repeat:no-repeat;
+        background-size:100% auto;
+        height:65vw;
+        width:100%;
+    }
+    .bannerdown{
+        margin:0 15px;
+    }
+    p.intervention{
+        display:flex;
+        flex-direction: column;
+        border:initial;
+     
+      
+       width: 90%;
+        
+    }
+    span.intervention{
+        font-size:20px;
+        font-weight: bold;
+        font-family: 'Roboto',sans-serif;
+        width:100%;
+        height:40px;
+        border:1px solid black;
+        margin-bottom: 10px;
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding:0px;  margin-right: 5px;
+    }
+    .services{
+        display: flex;
+        flex-direction: column;
+       
+        width:100%;
+       
+        
+    }
+    .service{
+        border:1px solid rgb(44,123,254);
+       
+        width:100%;
+        height:246px;
+        margin-bottom: 30px;
+        border-bottom: 24px inset rgb(44,123,254);
+        border-radius: 0px 0px 14px 7px;
+        background-color: white;
+        box-shadow: initial;
+    }
+  
+    #Que_fesons_nous,.titre_de_section{
+        font-size: 30px;
+        font-family: 'Roboto',sans-serif;
+        
+    }
+    
+
+   
+    .service h1 {
+       font-size:20px;
+       font-weight: bold;
+         font-family: 'Roboto',sans-serif;
+    }
+    
+    .service_descrption,.description_realisation{
+        font-size: 16px;
+        font-family: 'Roboto',sans-serif;
+        width:85%;
+    }
+    .bannerdown .section_realisation_services{
+        background-color: white;
+        width: 100%;
+        margin: 0px;
+       
+       
+    }
+  .voir_tout{
+    font-size: 16px;
+        font-family: 'Roboto',sans-serif;
+        text-decoration: none;
+  }
+a.voir_tout:hover{
+    text-decoration: underline black;
+  }
+    .icone{
+        height:100px;
+        width:100px;
+    
+    }
+    .see_all{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top:7px;
+
+    }
+    .Les_projets{
+
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px;
+    
+    }
+    
+    .projet{
+   
+        width:100%;
+        margin-bottom: 30px;
+        transition:box-shadow 0.5s ease;
+    }
+    /* .projet img{
+       
+    } */
+    .titre_de_realisation{
+        margin: 0;
+        font-size: 20px;
+    }
+    .defil_projet{
+        display: none;
+    }
+    .bloc_description{
+       
+        background-color:rgb(16,76,161);
+        padding-bottom: 3px;
+        
+    }
+    .projet:hover{
+        box-shadow:5px 5px 5px grey;
+    }
+
+}
+
