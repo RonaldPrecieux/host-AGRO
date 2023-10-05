@@ -22,10 +22,12 @@ function closeNav(){
 
 let images=[
 	"img/Protection-chantier.jpg",
-	"img/materiel-chantier.jpg",
-	"img/shutterstock_580685032-compressor.jpg",
 	"img/Batiment.jpg",
 	"img/immobillier.jpg",
+	// "img/materiel-chantier.jpg",
+	"img/shutterstock_580685032-compressor.jpg",
+	
+	
 
 
 ] 
@@ -55,7 +57,7 @@ setInterval(function() {
 	banner_slide_show.classList.remove('clear');
 	
 	
-  } ,1000);	
+  } ,5000);	
 
   //Page de Realisation
 let link_batiment=document.getElementById("link_batiment");

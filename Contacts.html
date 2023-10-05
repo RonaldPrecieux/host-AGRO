@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
 		<link rel="stylesheet"  href="Agrofazwebsite.css">
         <link rel="stylesheet" type="text/css" href="Contacts_css.css">
-		 <link rel="stylesheet" href=" fontawesomweb\fontawes\css\fontawesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
  		<link rel="stylesheet" href="css/responsive.css">
 	</head>
 	<body>
@@ -65,56 +65,100 @@
 					</div>
 			</div>
 		</header>	
-        <section >
+	
+		<section>
+			<div class="contacts">
+				<div class="contact-item">
+					<i class="fas fa-phone icone_contact"></i>
+					<h1>TÉLÉPHONE</h1>
+					<p>+229 95 06 79 08<br>+229 97 19 50 93</p>
+				</div>
+				<div class="contact-item">
+					<i class="fas fa-map-marker-alt icone_contact"></i>
+					<h1>ADRESSE</h1>
+					<p>01 BP 8080 Abomey-Calavi<br>Derrière l'école Jean Piaget 2<br><u>République du Bénin</u></p>
+				</div>
+				<div class="contact-item">
+					<i class="fas fa-envelope icone_contact"></i>
+					<h1>Email</h1>
+					<p><a href="mailto:agrofaz2010@gmail.com">agrofaz2010@gmail.com</a></p>
+				</div>
+			</div>
+		</section>
+	
+		<!-- Formulaire de contact -->
+		<section class="contact-form">
+			<h2>Contactez-nous</h2>
+			
+		
+<!-- Ajoutez un identifiant à votre formulaire -->
+<form id="contactForm" action="#" method="post">
+    <!-- ... Vos champs de formulaire ... --><div class="form-group">
+					<label for="name">Nom complet :</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Adresse e-mail :</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="message">Message :</label>
+					<textarea id="message" name="message" required></textarea>
+				</div>
+    <button type="button" id="submitButton">Envoyer</button>
+</form>
 
-            <div class="contacts">
-                <div> 
-                    <img class="icone_contact" src="img/Capture8.png" alt="">
-                    <h1>TELEPHONE</h1>
-                    <p>+229 95 06 79 08<br>
-                    +229 97 19 50 93</p>
-                </div>
-                <div>
-                    <img  class="icone_contact" src="img/home-icon.png" alt="">
-                    <h1>ADRESSE</h1>
+<!-- Div pour afficher le lien WhatsApp généré -->
+<div id="whatsappLinkContainer"></div>
+</section>
+<!-- JavaScript pour générer et afficher le lien WhatsApp -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var submitButton = document.getElementById('submitButton');
+        submitButton.addEventListener('click', function () {
+            var name = document.getElementById('name').value; // Remplacez 'name' par l'ID de votre champ de nom
+            var email = document.getElementById('email').value; // Remplacez 'email' par l'ID de votre champ d'e-mail
+            var message = document.getElementById('message').value; // Remplacez 'message' par l'ID de votre champ de message
 
-                    <p>01 BP 8080 Abomey-Calavi<br>
-                        Derriere l'ecole jean piaget 2<br>
-                        <u>Republique du Benin</u>
-                    </p>
-                </div>
-                <div>
-                    <img  class="icone_contact" src="img/email.png" alt="">
-					<h1>Email:</h1>
-                    <p><a href="mailto:agrofaz2010@gmail.com">agrofaz2010@gmailcom</a></p>
-                </div>
-            </div>
+            // Générez le message pré-rempli pour WhatsApp
+            var whatsappMessage = "Bonjour AGROFAZ SARL, je souhaite vous contacter. Mon nom est " + name + ", mon adresse e-mail est " + email + " et voici mon message : " + message;
 
-        </section>
-        
+            // Encodez le message pour une URL
+            var encodedMessage = encodeURIComponent(whatsappMessage);
 
+            // Numéro WhatsApp de AGROFAZ SARL
+            var whatsappNumber = "22995067908";
 
-        <footer>
-            <div class="Suivez_nous">
-                <span><strong><u>Suivez nous:</u></strong></span>
-                <div id="les_reseaux">
-                
-                <a href="#"><img class="image_de_pied_de_page" src="img/768px-Instagram_logo_2016.svg.png" alt="logo Instagram"> </a>
-                <a href="#"><img class="image_de_pied_de_page" src="img/linked-in-icon-8.png" alt="logo LinkedIn"> </a>
-                <a href="#"><img class="image_de_pied_de_page"  src="img/facebook.png" alt="Logo Facebook"></a>
-            </div>
-                
-                
-            </div>
-            <div class="Contact">
-                <p><strong><u>Nos Contacts:</u></strong></p>
-                <div class="contact_link">
-                <div id="Adreess"> <img class="image_de_pied_de_page" src="img/home-icon.png" alt="home-img"><span class="contact_link">Abomey-Calavi/Aichedji</span></div>
-                <div id="Gmail">   <img class="image_de_pied_de_page" src="img/email inbox letter .png" alt="google_logo"> <span     class="contact_link"> <a href="mailto:agrofaz2010@gmail.com">agrofaz2010@gmail.com </a> </span>	</div>
-                <div id="Telephone_whatsaap"> <img class="image_de_pied_de_page" src="img/whatsaap2.png" alt="Logo Whatsaap"> <span  class="contact_link"><a href="http//wa.me/22995067908">95067908</a> </span> </div>
-            </div>
-            </div>
-        </footer>
+            // Créez le lien WhatsApp avec le message pré-rempli
+            var whatsappLink = "https://wa.me/" + whatsappNumber + "?text=" + encodedMessage;
+
+            // Affichez le lien WhatsApp généré
+            var whatsappLinkContainer = document.getElementById('whatsappLinkContainer');
+            whatsappLinkContainer.innerHTML = '<a href="' + whatsappLink + '" target="_blank">Cliquez ici pour envoyer un message sur WhatsApp</a>';
+        });
+    });
+</script>
+
+		<footer>
+			<div class="footer-container">
+				<div class="footer-section">
+					<h2>Suivez-nous :</h2>
+					<ul>
+						<li><a href="#"><i class="fab fa-instagram footer-icons"></i> Instagram</a></li>
+						<li><a href="#"><i class="fab fa-linkedin-in footer-icons"></i> LinkedIn</a></li>
+						<li><a href="#"><i class="fab fa-facebook-f footer-icons"></i> Facebook</a></li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<h2>Nos Contacts :</h2>
+					<div class="footer-contact">
+						<p><i class="fas fa-home footer-icons"></i> Abomey-Calavi/Aichedji</p>
+						<p><i class="fas fa-envelope footer-icons"></i> <a href="mailto:agrofaz2010@gmail.com">agrofaz2010@gmail.com</a></p>
+						<p><i class="fab fa-whatsapp footer-icons"></i> <a href="http://wa.me/22995067908">95067908</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
         <script src="agrofaz_sarl_js.js">
         </script>

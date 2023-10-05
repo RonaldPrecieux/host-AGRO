@@ -6,6 +6,7 @@
   
 }
 #AproposBanner img{
+
     width: 40%;
     height: 100%; margin: 0 auto;
 }
@@ -73,6 +74,12 @@ text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px){
+    #AproposBanner img{
+        
+        width: 40%;
+        height: 100%; 
+        margin-top: 120px;
+    }
     .directeur{
         display: flex;
         flex-direction: column;

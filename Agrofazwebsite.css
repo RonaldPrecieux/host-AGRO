@@ -31,11 +31,16 @@ body{
 		background-size:100% auto;
 		height:auto;*/
 		width:100%;
+		box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+		z-index: 2;
+  /* X offset | Y offset | Blur radius | Spread radius | Color */
+		
 
 }
 .img_et_nom{
 	display:flex;
 	justify-content: flex-start;
+	align-items: center;
 }
 .nom_Agrofaz{
 	color:black;
@@ -129,6 +134,7 @@ body{
 	}
 	#slideshow{
 		background-image:url("img/Protection-chantier.jpg");
+		height: 100vh;
 		transition:opacity 0.5s ease;
 	}
 	#slideshow.clear{
@@ -175,6 +181,24 @@ body{
 /*Media query for sceen who have screen width under:500px*/
 @media only screen and (max-width: 500px)
 {	
+
+	.niveau2{
+		/*padding-top:20px;*/
+		width: 100%;
+		display:flex;
+		justify-content:space-between;
+		background-color:white;
+		/*background-image:/*url("img/Protection-chantier.jpg");
+			background-repeat:no-repeat;
+			background-size:100% auto;
+			height:auto;*/
+			width:100%;
+			height:80px;
+			position:fixed;
+			
+			
+	
+	}
 	/*Taille des lettre pour tout les element de la 
 	rubrique section*/
 	section,footer{
@@ -183,17 +207,17 @@ body{
 	/*FIN de définition de la taille des lettre*/
 
 	/*	Logo et description de l'entreprise*/
-	/*#Logo_Agrofaz{
-	height:40px;
-	width:50px;
+	#Logo_Agrofaz{
+	height:70%;
+	width:45%;
 	margin:5px 5px;
     }
 	
 	.nom_Agrofaz{
-		font-size: 60%
-		color: white;
-		width:85px;
-		margin-top:10px;
+		font-size: 19px;
+		color: green;
+		width:100%;
+		margin-top:3px;
 	}
 	/*Gestion des immage*/
 	
@@ -221,7 +245,16 @@ body{
 		display: none;
 	}
 	/*Fin de gestion des image*/	
-
+	#slideshow{
+		background-image:url("img/Protection-chantier.jpg");
+		height: 85vh;
+		transition:opacity 0.5s ease;
+	}
+	#defil_phrase{
+		font-size: 45px;
+		font-weight: bold;
+		color:yellow;
+	}
 }
 
 /* Fin du media query 500px Navigation */

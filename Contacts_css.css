@@ -1,7 +1,7 @@
-
+/* 
 .contacts{
     background-color:chocolate;
-    /* opacity: 0.6; */
+
  
     display:flex;
     justify-content: space-between;
@@ -25,21 +25,145 @@
 }
 footer{
     margin-top: 0;
+} */
+
+section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-item {
+    flex: 1;
+    padding: 20px;
+}
+
+.icone_contact {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Styles CSS pour le formulaire de contact */
+.contact-form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 @media only screen and (max-width: 500px){
   
-    .contacts div{
-        margin-top: 10px;
+    section {
+        background-color: #f9f9f9;
+        padding: 20px;
+        text-align: center;
+        
     }
-    .contacts{
-        background-color:chocolate;
-        /* opacity: 0.6; */
-      
-        display:flex;
-        flex-direction: column;
+
+    .contacts {
+        display: flex;
+        justify-content: space-around;
         align-items: center;
-        justify-content: space-between;
-        padding: 17% 90px;
-    
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-item {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .icone_contact {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    /* Styles CSS pour le formulaire de contact */
+    .contact-form {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
     }
 }
