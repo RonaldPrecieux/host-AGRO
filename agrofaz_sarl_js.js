@@ -1,23 +1,41 @@
+let sidenav = document.getElementById("mySidenav");
+let openBtn = document.getElementById("openBtn");
+let BouttonX = document.getElementById("close_Boutton");
 
-let sidenav= document.getElementById("mySidenav");
-let openBtn= document.getElementById("openBtn");
-let burger_icon=document.getElementById("IconBurger");
-let BouttonX=document.getElementById("close_Boutton");
-openBtn.onclick=openNav;
-BouttonX.onclick = closeNav;
-/*Set the width of the side navigation to 250px*/
-function openNav(){
-	sidenav.classList.add("active");
-	burger_icon.classList.add("hide");
-	BouttonX.classList.add("visible");
-}
-/*
-Set width of the side navigation to 0*/
-function closeNav(){
-	sidenav.classList.remove("active");
-	burger_icon.classList.remove("hide");
-	BouttonX.classList.remove("visible");
-}
+/* Initial state of the navigation */
+let isNavOpen = false;
+
+openBtn.addEventListener("click", (event) => {
+  if (!isNavOpen) {
+    sidenav.classList.add("active");
+    openBtn.classList.add("hide");
+    BouttonX.classList.add("visible");
+    isNavOpen = true;
+    console.log('open');
+    // Empêcher la propagation de l'événement de clic
+    event.stopPropagation();
+  }
+});
+
+BouttonX.addEventListener("click", (event) => {
+  if (isNavOpen) {
+    sidenav.classList.remove("active");
+    openBtn.classList.remove("hide");
+    BouttonX.classList.remove("visible");
+    isNavOpen = false;
+    console.log('close');
+  }
+});
+
+window.addEventListener("click", (event) => {
+  if (isNavOpen && event.target !== sidenav && event.target !== openBtn) {
+    console.log('ok');
+    sidenav.classList.remove("active");
+    openBtn.classList.remove("hide");
+    BouttonX.classList.remove("visible");
+    isNavOpen = false;
+  }
+});
 
 
 let images=[

@@ -178,84 +178,6 @@ body{
 	
 	
 
-/*Media query for sceen who have screen width under:500px*/
-@media only screen and (max-width: 500px)
-{	
-
-	.niveau2{
-		/*padding-top:20px;*/
-		width: 100%;
-		display:flex;
-		justify-content:space-between;
-		background-color:white;
-		/*background-image:/*url("img/Protection-chantier.jpg");
-			background-repeat:no-repeat;
-			background-size:100% auto;
-			height:auto;*/
-			width:100%;
-			height:80px;
-			position:fixed;
-			
-			
-	
-	}
-	/*Taille des lettre pour tout les element de la 
-	rubrique section*/
-	section,footer{
-	font-size: 3vw;
-	}
-	/*FIN de définition de la taille des lettre*/
-
-	/*	Logo et description de l'entreprise*/
-	#Logo_Agrofaz{
-	height:70%;
-	width:45%;
-	margin:5px 5px;
-    }
-	
-	.nom_Agrofaz{
-		font-size: 19px;
-		color: green;
-		width:100%;
-		margin-top:3px;
-	}
-	/*Gestion des immage*/
-	
-	.image_de_pied_de_page{
-		max-height:6vw;
-		max-width:6vw;
-	}
-	.BoutontX{
-		font-size:25px;
-		bottom: 20px;
-		display:none;
-		text-decoration:none;
-		color:#111;
-		transition:display 5s ease;
-	}
-	.BoutontX.visible{
-		display:block;
-		opacity: 0.5;
-		top:20;
-		margin-right:14px;
-		
-		
-	}
-	.burger-icon.hide{
-		display: none;
-	}
-	/*Fin de gestion des image*/	
-	#slideshow{
-		background-image:url("img/Protection-chantier.jpg");
-		height: 85vh;
-		transition:opacity 0.5s ease;
-	}
-	#defil_phrase{
-		font-size: 45px;
-		font-weight: bold;
-		color:yellow;
-	}
-}
 
 /* Fin du media query 500px Navigation */
 
@@ -270,7 +192,7 @@ body{
 	}
 	.sidenav{
 	height:100vh;
-	width:60vw;
+	width:40vw;
 	position:fixed;
 	z-index:1;
 	top:0;
@@ -287,12 +209,13 @@ body{
 		text-decoration:none;
 		display:block;
 		transition:0.3s;
-		border-bottom:1px solid grey
+		border-bottom:1px solid grey;
+		font-size: 24px;
 
 	}
 	.sidenav a:hover{
 		color:#111;
-		background-color: green;
+		
 	}
 	.sidenav a:active{
 		background-color: violet;
@@ -318,28 +241,29 @@ body{
 		font-size:36px;
 	}
 	/*Icone Burger*/
-	.burger-icon span{
+	.burger-icon {
 		display:block;
 		width:25px;
 		height: 3px;
-		background-color:green;
-		margin:3px 0;
-		margin-right: 4px;
+		font-size: 40px;
+		position: relative;
+		bottom:10px;
+		margin-right: 55px;
+		color: indigo;
 
 	}
 	.BoutontX{
-		font-size:25px;
-		bottom: 20px;
 		display:none;
 		text-decoration:none;
-		color:#111;
 		transition:display 5s ease;
+		font-size: 40px;
 	}
 	.BoutontX.visible{
 		display:block;
-		opacity: 0.5;
-		top:20;
-		margin-right:14px;
+		position: relative;
+		bottom:-15px;
+		
+		margin-right:53px;
 		
 		
 	}
@@ -361,6 +285,122 @@ body{
 }
 /*Fin du media query 768 de la navigation*/
 
+/*Media query for sceen who have screen width under:500px*/
+@media only screen and (max-width: 500px)
+{	
+
+	.niveau2{
+		/*padding-top:20px;*/
+		width: 100%;
+		display:flex;
+		justify-content:space-between;
+		background-color:white;
+		/*background-image:/*url("img/Protection-chantier.jpg");
+			background-repeat:no-repeat;
+			background-size:100% auto;
+			height:auto;*/
+			width:100%;
+			height:80px;
+			position:fixed;
+			
+			
+	
+	}
+	
+	.sidenav{
+		height:100vh;
+		width:60vw;
+		position:fixed;
+		z-index:1;
+		top:0;
+		left:-60vw;
+		background-color:#e8e8e8;
+		padding-top:60px;
+		transition:left 0.5s ease;
+		opacity: 0.95;
+		box-shadow: 14px,14px,4px,5px,black;
+		}
+		/*sidenav menu links*/
+		.sidenav a {
+			padding: 15px 8px 15px 32px;
+			text-decoration:none;
+			display:block;
+			transition:0.3s;
+			border-bottom:1px solid grey;
+			font-size: 17px;
+	
+		}
+	/*Taille des lettre pour tout les element de la 
+	rubrique section*/
+	section,footer{
+	font-size: 3vw;
+	}
+	/*FIN de définition de la taille des lettre*/
+
+	/*	Logo et description de l'entreprise*/
+	#Logo_Agrofaz{
+	height:70%;
+	width:45%;
+	margin:5px 5px;
+    }
+	
+	.nom_Agrofaz{
+		font-size: 19px;
+		color: green;
+		width:100%;
+		margin-top:3px;
+	}
+	/*Gestion des immage*/
+	
+	/* .image_de_pied_de_page{
+		max-height:6vw;
+		max-width:6vw;
+	} */
+
+	/*Icone Burger*/
+	.burger-icon {
+		display:block;
+		width:25px;
+		height: 3px;
+		font-size:25px;
+		position: relative;
+		bottom:10px;
+		margin-right: 25px;
+		color: indigo;
+
+	}
+	.BoutontX{
+		font-size:25px;
+		
+		display:none;
+		text-decoration:none;
+		color:#111;
+		transition:display 5s ease;
+	}
+	.BoutontX.visible{
+		display:block;
+		opacity: 0.9;
+		margin-right:25px;
+		position: relative;
+		bottom: 0px;
+		
+	}
+	.burger-icon.hide{
+		display: none;
+	}
+	/*Fin de gestion des image*/	
+	#slideshow{
+		background-image:url("img/Protection-chantier.jpg");
+		height: 85vh;
+		transition:opacity 0.5s ease;
+	}
+	#defil_phrase{
+		font-size: 45px;
+		font-weight: bold;
+		color:yellow;
+		text-align: center;
+	}
+}
 
 
 /*Section*/
@@ -656,6 +696,12 @@ footer{
 	display:flex;
 	flex-direction:column;
 
+}
+.footer-section li{
+	list-style-type: none;
+}
+.footer-section i ,a{
+	font-size: 17px;
 }
 .image_de_pied_de_page{
 	height:30px;
